@@ -1,4 +1,5 @@
 import React,{Component,Fragment} from 'react';
+import LinearGradient from 'react-native-linear-gradient';
 import CalculatorResponse from './components/CalculatorResponse';
 import CalculatorButtonsContainer from './components/CalculatorButtonsContainer';
 import {
@@ -178,7 +179,11 @@ class Calculator extends React.Component {
       const { first, second, operator, result } = this.state;
   
       return (
-        <View><Text>Vijeet</Text>
+        <LinearGradient
+          colors={['#3498db', '#8e44ad']}
+          style={styles3.container}
+        >
+  
           <CalculatorResponse
             first={first}
             second={second}
@@ -192,7 +197,7 @@ class Calculator extends React.Component {
           />
   
           <StatusBar barStyle="light-content" />
-        </View>
+        </LinearGradient>
       );
     }
   }
